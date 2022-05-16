@@ -768,7 +768,7 @@
             <Parameter Name="DepartmentId" Mode="In" Type="Int32" />
             <Parameter Name="DepartmentName" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="InsertUpdateEmployee" ReturnType="Collection(Int32)">
+          <FunctionImport Name="InsertUpdateEmployee" ReturnType="Collection(Karan_SatvaModel.InsertUpdateEmployee_Result)">
             <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
             <Parameter Name="EmployeeName" Mode="In" Type="String" />
             <Parameter Name="EmailAddress" Mode="In" Type="String" />
@@ -908,6 +908,9 @@
         </ComplexType>
         <ComplexType Name="ProjectStatus_Result1">
           <Property Type="Int32" Name="Result" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="InsertUpdateEmployee_Result">
+          <Property Type="Int32" Name="EmpID" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1151,7 +1154,13 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="InsertUpdateDepartment" FunctionName="Karan_SatvaModel.Store.InsertUpdateDepartment" />
-          <FunctionImportMapping FunctionImportName="InsertUpdateEmployee" FunctionName="Karan_SatvaModel.Store.InsertUpdateEmployee" />
+          <FunctionImportMapping FunctionImportName="InsertUpdateEmployee" FunctionName="Karan_SatvaModel.Store.InsertUpdateEmployee" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Karan_SatvaModel.InsertUpdateEmployee_Result">
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="InsertUpdateProject" FunctionName="Karan_SatvaModel.Store.InsertUpdateProject" >
             <ResultMapping>
               <ComplexTypeMapping TypeName="Karan_SatvaModel.InsertUpdateProject_Result">

@@ -24,3 +24,5 @@ D:\ProjectAllocaiton\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 D:\ProjectAllocaiton\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
 D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\AutoMapper.dll
 D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\AutoMapper.xml
+D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\AutoMapper.dll
+D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\AutoMapper.xml

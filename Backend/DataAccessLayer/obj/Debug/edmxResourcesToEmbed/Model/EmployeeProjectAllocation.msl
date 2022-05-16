@@ -237,7 +237,13 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="InsertUpdateDepartment" FunctionName="Karan_SatvaModel.Store.InsertUpdateDepartment" />
-    <FunctionImportMapping FunctionImportName="InsertUpdateEmployee" FunctionName="Karan_SatvaModel.Store.InsertUpdateEmployee" />
+    <FunctionImportMapping FunctionImportName="InsertUpdateEmployee" FunctionName="Karan_SatvaModel.Store.InsertUpdateEmployee">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Karan_SatvaModel.InsertUpdateEmployee_Result">
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="InsertUpdateProject" FunctionName="Karan_SatvaModel.Store.InsertUpdateProject">
       <ResultMapping>
         <ComplexTypeMapping TypeName="Karan_SatvaModel.InsertUpdateProject_Result">

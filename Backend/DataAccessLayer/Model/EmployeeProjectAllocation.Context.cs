@@ -121,7 +121,7 @@ namespace DataAccessLayer.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("InsertUpdateDepartment", departmentIdParameter, departmentNameParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> InsertUpdateEmployee(Nullable<int> employeeId, string employeeName, string emailAddress, Nullable<long> phone, Nullable<System.DateTime> joinDate, Nullable<decimal> totalExperience, Nullable<decimal> salary, Nullable<bool> isActive, Nullable<bool> isDelete, Nullable<int> departmentId)
+        public virtual ObjectResult<InsertUpdateEmployee_Result> InsertUpdateEmployee(Nullable<int> employeeId, string employeeName, string emailAddress, Nullable<long> phone, Nullable<System.DateTime> joinDate, Nullable<decimal> totalExperience, Nullable<decimal> salary, Nullable<bool> isActive, Nullable<bool> isDelete, Nullable<int> departmentId)
         {
             var employeeIdParameter = employeeId.HasValue ?
                 new ObjectParameter("EmployeeId", employeeId) :
@@ -163,7 +163,7 @@ namespace DataAccessLayer.Model
                 new ObjectParameter("DepartmentId", departmentId) :
                 new ObjectParameter("DepartmentId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("InsertUpdateEmployee", employeeIdParameter, employeeNameParameter, emailAddressParameter, phoneParameter, joinDateParameter, totalExperienceParameter, salaryParameter, isActiveParameter, isDeleteParameter, departmentIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<InsertUpdateEmployee_Result>("InsertUpdateEmployee", employeeIdParameter, employeeNameParameter, emailAddressParameter, phoneParameter, joinDateParameter, totalExperienceParameter, salaryParameter, isActiveParameter, isDeleteParameter, departmentIdParameter);
         }
     
         public virtual ObjectResult<InsertUpdateProject_Result> InsertUpdateProject(Nullable<int> projectId, string projectName, string projectDescription, Nullable<System.DateTime> startDate, string projectStatus, Nullable<bool> isDelete, Nullable<bool> isActive)

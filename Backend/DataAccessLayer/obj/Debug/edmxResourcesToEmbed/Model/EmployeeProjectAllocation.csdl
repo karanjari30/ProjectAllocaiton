@@ -339,7 +339,7 @@
       <Parameter Name="DepartmentId" Mode="In" Type="Int32" />
       <Parameter Name="DepartmentName" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="InsertUpdateEmployee" ReturnType="Collection(Int32)">
+    <FunctionImport Name="InsertUpdateEmployee" ReturnType="Collection(Karan_SatvaModel.InsertUpdateEmployee_Result)">
       <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
       <Parameter Name="EmployeeName" Mode="In" Type="String" />
       <Parameter Name="EmailAddress" Mode="In" Type="String" />
@@ -479,5 +479,8 @@
   </ComplexType>
   <ComplexType Name="ProjectStatus_Result1">
     <Property Type="Int32" Name="Result" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="InsertUpdateEmployee_Result">
+    <Property Type="Int32" Name="EmpID" Nullable="true" />
   </ComplexType>
 </Schema>

@@ -360,3 +360,5 @@ D:\ProjectAllocaiton\Backend\ProjectAllocationAPI\obj\Debug\ProjectAllocationAPI
 D:\ProjectAllocaiton\Backend\ProjectAllocationAPI\obj\Debug\ProjectAllocationAPI.pdb
 D:\ProjectAllocaiton\Backend\ProjectAllocationAPI\bin\AutoMapper.dll
 D:\ProjectAllocaiton\Backend\ProjectAllocationAPI\bin\AutoMapper.xml
+D:\ProjectAllocationApi\Backend\ProjectAllocationAPI\bin\AutoMapper.dll
+D:\ProjectAllocationApi\Backend\ProjectAllocationAPI\bin\AutoMapper.xml
