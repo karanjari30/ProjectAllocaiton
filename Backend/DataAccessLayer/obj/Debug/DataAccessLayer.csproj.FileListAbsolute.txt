@@ -1,0 +1,12 @@
+D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProjectAllocationApi\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+D:\ProjectAllocationApi\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\ProjectAllocationApi\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\ProjectAllocationApi\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\ProjectAllocationApi\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

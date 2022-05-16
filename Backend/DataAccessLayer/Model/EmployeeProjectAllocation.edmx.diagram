@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f2762bdafacc4c6ea6c4ecb75669f25a" Name="Diagram1">
+        <EntityTypeShape EntityType="Karan_SatvaModel.C__MigrationHistory" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.Activity" Width="1.5" PointX="9.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.AspNetRole" Width="1.5" PointX="5.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.AspNetUserClaim" Width="1.5" PointX="10.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.AspNetUserLogin" Width="1.5" PointX="10.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.AspNetUser" Width="1.5" PointX="8" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.Department" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.Employee" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.Project" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.ProjectAllocation" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.Task" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Karan_SatvaModel.TaskAllocation" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Karan_SatvaModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Karan_SatvaModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Karan_SatvaModel.FK__Employee__Depart__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="Karan_SatvaModel.FK__ProjectAl__Emplo__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="Karan_SatvaModel.FK__TaskAlloc__Emplo__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="Karan_SatvaModel.FK__ProjectAl__Proje__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="Karan_SatvaModel.FK__Task__ProjectId__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="Karan_SatvaModel.FK__TaskAlloc__TaskI__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="Karan_SatvaModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
