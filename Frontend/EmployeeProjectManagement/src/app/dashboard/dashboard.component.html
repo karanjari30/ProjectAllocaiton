@@ -1,0 +1,135 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Employee Project Allocation</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <button class="btn btn-warning btn-md" (click)="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Add Project Data" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <ng-container *nzModalContent>
+        <form nz-form [formGroup]="projectDataForm" (ngSubmit)="storeProjectData()" >
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="projectName">Project Name</nz-form-label>
+            <nz-form-item>
+                <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please enter project name">
+                    <input nz-input formControlName="projectName" />
+                </nz-form-control>
+            </nz-form-item>
+            
+            <nz-form-label [nzSm]="9" [nzXs]="24" nzRequired nzFor="projectDescription">Project Description</nz-form-label>
+            <nz-form-item>
+                <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please enter project description">
+                    <textarea rows="4" nz-input formControlName="projectDescription"></textarea>
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-label [nzSm]="9" [nzXs]="24" nzRequired nzFor="startDate">Start Date</nz-form-label>
+            <nz-form-item>
+                <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please select start date">
+                    <nz-date-picker formControlName="startDate" style="width:470px;"></nz-date-picker>
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-label [nzSm]="9" [nzXs]="24" nzRequired nzFor="projectStatus">Project Status</nz-form-label>
+            <nz-form-item>
+                <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please select project status">
+                    <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select project status" formControlName="projectStatus">
+                        <nz-option nzLabel="Created" nzValue="Created"></nz-option>
+                        <nz-option nzLabel="Inprogress" nzValue="Inprogress"></nz-option>
+                        <nz-option nzLabel="Completed" nzValue="Completed"></nz-option>
+                      </nz-select>
+                </nz-form-control>
+            </nz-form-item>
+            <div class="row">
+                <div class="col-6">
+                    <nz-form-label [nzSm]="9" [nzXs]="24" nzFor="isDelete">Is Delete</nz-form-label>
+                    <nz-form-item>
+                        <nz-form-control [nzSm]="14" [nzXs]="24" >
+                            <nz-switch formControlName="isDelete"></nz-switch>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+                <div class="col-6">
+                    <nz-form-label [nzSm]="9" [nzXs]="24" nzFor="startDate">Is Active</nz-form-label>
+                    <nz-form-item>
+                        <nz-form-control [nzSm]="14" [nzXs]="24">
+                            <nz-switch formControlName="isActive"></nz-switch>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+            </div>
+        </form>
+    </ng-container>
+</nz-modal>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-5 d-flex justify-content-center">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                    [(ngModel)]="status">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Status</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 mt-3 d-flex justify-content-center">
+            <button type="button" class="btn btn-success btn-lg" (click)="getAPIData()">Get Data</button>
+        </div>
+        <div class="col-6 mt-3 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary btn-lg" (click)="showModal()">Add Data</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="table-responsive" *ngIf="showTable">
+                <nz-table #apiDataTable [nzData]="apiData" [nzPageSize]="5">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Project Name</th>
+                            <th>Description</th>
+                            <th>Start Date</th>
+                            <th>Status</th>
+                            <th>IsActive</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of apiDataTable.data">
+                            <td>{{ data.ProjectId }}</td>
+                            <td>{{ data.ProjectName }}</td>
+                            <td>{{ data.ProjectDescription }}</td>
+                            <td>{{ data.StartDate}}</td>
+                            <td>{{ data.ProjectStatus }}</td>
+                            <td class="text-center">
+                                <span *ngIf="data.IsActive == true">
+                                    <fa-icon [icon]="isActiveIcon" class="text-success"></fa-icon>
+                                </span>
+                                <span *ngIf="data.IsActive == false">
+                                    <fa-icon [icon]="isNotActiveIcon" class="text-danger"></fa-icon>
+                                </span>
+                            </td>
+                            <td><a (click)="editProject(data.ProjectId)"><fa-icon [icon]="editIcon"></fa-icon></a> | <a (click)="deleteProject(data.ProjectId)"><fa-icon [icon]="deleteIcon"></fa-icon></a></td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </div>
+    </div>
+</div>

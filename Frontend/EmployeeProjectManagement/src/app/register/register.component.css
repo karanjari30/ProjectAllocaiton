@@ -1,0 +1,11 @@
+[nz-form] {
+  width: 800px;
+}
+
+.customOverFlow {
+  overflow: hidden;
+}
+
+i {
+  cursor: pointer;
+}
