@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Karan_SatvaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Karan_SatvaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="__MigrationHistory">
           <Key>
             <PropertyRef Name="MigrationId" />
@@ -425,8 +425,7 @@
             <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Karan_SatvaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -744,26 +743,26 @@
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
           </AssociationSet>
           <FunctionImport Name="CheckProjectStatsus" IsComposable="true" ReturnType="Collection(Karan_SatvaModel.CheckProjectStatsus_Result)">
-            <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+          <Parameter Name="ProjectId" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="DeleteProject">
-            <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+          <FunctionImport Name="DeleteProject" ReturnType="Collection(Karan_SatvaModel.DeleteProject_Result)">
+          <Parameter Name="ProjectId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="EmaployeeByProjectID" ReturnType="Collection(Karan_SatvaModel.EmaployeeByProjectID_Result)">
-            <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+          <Parameter Name="ProjectId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetActivityHistory" ReturnType="Collection(Karan_SatvaModel.GetActivityHistory_Result)">
             <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
             <Parameter Name="ProjectId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetAllEmployee" ReturnType="Collection(Karan_SatvaModel.GetAllEmployee_Result)">
-            <Parameter Name="EmployeeStatus" Mode="In" Type="Boolean" />
+          <Parameter Name="EmployeeStatus" Mode="In" Type="Boolean" />
           </FunctionImport>
-          <FunctionImport Name="GetAllProject" ReturnType="Collection(Karan_SatvaModel.GetAllProject_Result)">
-            <Parameter Name="ProjectStatus" Mode="In" Type="Boolean" />
+          <FunctionImport Name="GetAllProject" ReturnType="Collection(Karan_SatvaModel.GetAllProject_Result1)">
+          <Parameter Name="ProjectStatus" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="GetProjectById" ReturnType="Collection(Karan_SatvaModel.GetProjectById_Result)">
-            <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+          <Parameter Name="ProjectId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="InsertUpdateDepartment" ReturnType="Collection(Int32)">
             <Parameter Name="DepartmentId" Mode="In" Type="Int32" />
@@ -781,7 +780,7 @@
             <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
             <Parameter Name="DepartmentId" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="InsertUpdateProject" ReturnType="Collection(Int32)">
+          <FunctionImport Name="InsertUpdateProject" ReturnType="Collection(Karan_SatvaModel.InsertUpdateProject_Result)">
             <Parameter Name="ProjectId" Mode="In" Type="Int32" />
             <Parameter Name="ProjectName" Mode="In" Type="String" />
             <Parameter Name="ProjectDescription" Mode="In" Type="String" />
@@ -808,9 +807,9 @@
             <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="ProjectsByEmployeeID" ReturnType="Collection(Karan_SatvaModel.ProjectsByEmployeeID_Result)">
-            <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
+          <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="ProjectStatus" ReturnType="Collection(Karan_SatvaModel.ProjectStatus_Result)">
+          <FunctionImport Name="ProjectStatus" ReturnType="Collection(Karan_SatvaModel.ProjectStatus_Result1)">
             <Parameter Name="ProjectId" Mode="In" Type="Int32" />
             <Parameter Name="ProjectStatus" Mode="In" Type="String" />
           </FunctionImport>
@@ -892,6 +891,23 @@
           <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="TaskName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="InsertUpdateProject_Result">
+          <Property Type="Int32" Name="ID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetAllProject_Result1">
+          <Property Type="Int32" Name="ProjectId" Nullable="false" />
+          <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProjectDescription" Nullable="true" MaxLength="150" />
+          <Property Type="DateTime" Name="StartDate" Nullable="false" />
+          <Property Type="String" Name="ProjectStatus" Nullable="true" MaxLength="15" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="DeleteProject_Result">
+          <Property Type="Int32" Name="result" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="ProjectStatus_Result1">
+          <Property Type="Int32" Name="Result" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1062,7 +1078,13 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="DeleteProject" FunctionName="Karan_SatvaModel.Store.DeleteProject" />
+          <FunctionImportMapping FunctionImportName="DeleteProject" FunctionName="Karan_SatvaModel.Store.DeleteProject" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Karan_SatvaModel.DeleteProject_Result">
+                <ScalarProperty Name="result" ColumnName="result" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="EmaployeeByProjectID" FunctionName="Karan_SatvaModel.Store.EmaployeeByProjectID">
             <ResultMapping>
               <ComplexTypeMapping TypeName="Karan_SatvaModel.EmaployeeByProjectID_Result">
@@ -1105,8 +1127,8 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="GetAllProject" FunctionName="Karan_SatvaModel.Store.GetAllProject">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="Karan_SatvaModel.GetAllProject_Result">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Karan_SatvaModel.GetAllProject_Result1">
                 <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
                 <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
                 <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
@@ -1130,7 +1152,13 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="InsertUpdateDepartment" FunctionName="Karan_SatvaModel.Store.InsertUpdateDepartment" />
           <FunctionImportMapping FunctionImportName="InsertUpdateEmployee" FunctionName="Karan_SatvaModel.Store.InsertUpdateEmployee" />
-          <FunctionImportMapping FunctionImportName="InsertUpdateProject" FunctionName="Karan_SatvaModel.Store.InsertUpdateProject" />
+          <FunctionImportMapping FunctionImportName="InsertUpdateProject" FunctionName="Karan_SatvaModel.Store.InsertUpdateProject" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Karan_SatvaModel.InsertUpdateProject_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="InsertUpdateProjectAllocation" FunctionName="Karan_SatvaModel.Store.InsertUpdateProjectAllocation" />
           <FunctionImportMapping FunctionImportName="InsertUpdateTask" FunctionName="Karan_SatvaModel.Store.InsertUpdateTask" />
           <FunctionImportMapping FunctionImportName="InsertUpdateTaskAllocation" FunctionName="Karan_SatvaModel.Store.InsertUpdateTaskAllocation" />
@@ -1146,17 +1174,9 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="ProjectStatus" FunctionName="Karan_SatvaModel.Store.ProjectStatus">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="Karan_SatvaModel.ProjectStatus_Result">
-                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
-                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
-                <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
-                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-                <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Karan_SatvaModel.ProjectStatus_Result1">
+                <ScalarProperty Name="Result" ColumnName="Result" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

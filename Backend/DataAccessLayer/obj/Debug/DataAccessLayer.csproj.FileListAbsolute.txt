@@ -10,3 +10,17 @@ D:\ProjectAllocationApi\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.csproj
 D:\ProjectAllocationApi\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 D:\ProjectAllocationApi\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\ProjectAllocationApi\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProjectAllocaiton\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\ProjectAllocaiton\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\ProjectAllocaiton\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\ProjectAllocaiton\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\ProjectAllocaiton\Backend\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\AutoMapper.dll
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\AutoMapper.xml

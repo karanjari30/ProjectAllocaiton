@@ -50,13 +50,13 @@ namespace DataAccessLayer.Model
             return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<CheckProjectStatsus_Result>("[Karan_SatvaEntities].[CheckProjectStatsus](@ProjectId)", projectIdParameter);
         }
     
-        public virtual int DeleteProject(Nullable<int> projectId)
+        public virtual ObjectResult<DeleteProject_Result> DeleteProject(Nullable<int> projectId)
         {
             var projectIdParameter = projectId.HasValue ?
                 new ObjectParameter("ProjectId", projectId) :
                 new ObjectParameter("ProjectId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("DeleteProject", projectIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DeleteProject_Result>("DeleteProject", projectIdParameter);
         }
     
         public virtual ObjectResult<EmaployeeByProjectID_Result> EmaployeeByProjectID(Nullable<int> projectId)
@@ -90,13 +90,13 @@ namespace DataAccessLayer.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAllEmployee_Result>("GetAllEmployee", employeeStatusParameter);
         }
     
-        public virtual ObjectResult<GetAllProject_Result> GetAllProject(Nullable<bool> projectStatus)
+        public virtual ObjectResult<GetAllProject_Result1> GetAllProject(Nullable<bool> projectStatus)
         {
             var projectStatusParameter = projectStatus.HasValue ?
                 new ObjectParameter("ProjectStatus", projectStatus) :
                 new ObjectParameter("ProjectStatus", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAllProject_Result>("GetAllProject", projectStatusParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAllProject_Result1>("GetAllProject", projectStatusParameter);
         }
     
         public virtual ObjectResult<GetProjectById_Result> GetProjectById(Nullable<int> projectId)
@@ -166,7 +166,7 @@ namespace DataAccessLayer.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("InsertUpdateEmployee", employeeIdParameter, employeeNameParameter, emailAddressParameter, phoneParameter, joinDateParameter, totalExperienceParameter, salaryParameter, isActiveParameter, isDeleteParameter, departmentIdParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> InsertUpdateProject(Nullable<int> projectId, string projectName, string projectDescription, Nullable<System.DateTime> startDate, string projectStatus, Nullable<bool> isDelete, Nullable<bool> isActive)
+        public virtual ObjectResult<InsertUpdateProject_Result> InsertUpdateProject(Nullable<int> projectId, string projectName, string projectDescription, Nullable<System.DateTime> startDate, string projectStatus, Nullable<bool> isDelete, Nullable<bool> isActive)
         {
             var projectIdParameter = projectId.HasValue ?
                 new ObjectParameter("ProjectId", projectId) :
@@ -196,7 +196,7 @@ namespace DataAccessLayer.Model
                 new ObjectParameter("IsActive", isActive) :
                 new ObjectParameter("IsActive", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("InsertUpdateProject", projectIdParameter, projectNameParameter, projectDescriptionParameter, startDateParameter, projectStatusParameter, isDeleteParameter, isActiveParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<InsertUpdateProject_Result>("InsertUpdateProject", projectIdParameter, projectNameParameter, projectDescriptionParameter, startDateParameter, projectStatusParameter, isDeleteParameter, isActiveParameter);
         }
     
         public virtual ObjectResult<Nullable<int>> InsertUpdateProjectAllocation(Nullable<int> projectAllocationId, Nullable<int> employeeId, Nullable<int> projectId)
@@ -267,7 +267,7 @@ namespace DataAccessLayer.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ProjectsByEmployeeID_Result>("ProjectsByEmployeeID", employeeIdParameter);
         }
     
-        public virtual ObjectResult<ProjectStatus_Result> ProjectStatus(Nullable<int> projectId, string projectStatus)
+        public virtual ObjectResult<ProjectStatus_Result1> ProjectStatus(Nullable<int> projectId, string projectStatus)
         {
             var projectIdParameter = projectId.HasValue ?
                 new ObjectParameter("ProjectId", projectId) :
@@ -277,7 +277,7 @@ namespace DataAccessLayer.Model
                 new ObjectParameter("ProjectStatus", projectStatus) :
                 new ObjectParameter("ProjectStatus", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ProjectStatus_Result>("ProjectStatus", projectIdParameter, projectStatusParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ProjectStatus_Result1>("ProjectStatus", projectIdParameter, projectStatusParameter);
         }
     
         public virtual ObjectResult<TaskByProjectAndFilterByEmployee_Result> TaskByProjectAndFilterByEmployee(Nullable<int> projectId, Nullable<int> employeeId)

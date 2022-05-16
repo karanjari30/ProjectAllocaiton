@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "78fb1fbe-1d5d-490b-b602-6e23d726e3e7": {
+      "ProjectGuid": "78fb1fbe-1d5d-490b-b602-6e23d726e3e7",
+      "DisplayName": "ProjectAllocationAPI",
+      "ColorIndex": 0
+    },
+    "02a63f0f-5e2d-4634-87ce-fe3821ae0755": {
+      "ProjectGuid": "02a63f0f-5e2d-4634-87ce-fe3821ae0755",
+      "DisplayName": "DataAccessLayer",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

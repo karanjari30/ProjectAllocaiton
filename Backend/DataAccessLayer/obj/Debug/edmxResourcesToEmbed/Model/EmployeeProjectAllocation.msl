@@ -164,7 +164,13 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="DeleteProject" FunctionName="Karan_SatvaModel.Store.DeleteProject" />
+    <FunctionImportMapping FunctionImportName="DeleteProject" FunctionName="Karan_SatvaModel.Store.DeleteProject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Karan_SatvaModel.DeleteProject_Result">
+          <ScalarProperty Name="result" ColumnName="result" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="EmaployeeByProjectID" FunctionName="Karan_SatvaModel.Store.EmaployeeByProjectID">
       <ResultMapping>
         <ComplexTypeMapping TypeName="Karan_SatvaModel.EmaployeeByProjectID_Result">
@@ -208,7 +214,7 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="GetAllProject" FunctionName="Karan_SatvaModel.Store.GetAllProject">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="Karan_SatvaModel.GetAllProject_Result">
+        <ComplexTypeMapping TypeName="Karan_SatvaModel.GetAllProject_Result1">
           <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
           <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
           <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
@@ -232,7 +238,13 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="InsertUpdateDepartment" FunctionName="Karan_SatvaModel.Store.InsertUpdateDepartment" />
     <FunctionImportMapping FunctionImportName="InsertUpdateEmployee" FunctionName="Karan_SatvaModel.Store.InsertUpdateEmployee" />
-    <FunctionImportMapping FunctionImportName="InsertUpdateProject" FunctionName="Karan_SatvaModel.Store.InsertUpdateProject" />
+    <FunctionImportMapping FunctionImportName="InsertUpdateProject" FunctionName="Karan_SatvaModel.Store.InsertUpdateProject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Karan_SatvaModel.InsertUpdateProject_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="InsertUpdateProjectAllocation" FunctionName="Karan_SatvaModel.Store.InsertUpdateProjectAllocation" />
     <FunctionImportMapping FunctionImportName="InsertUpdateTask" FunctionName="Karan_SatvaModel.Store.InsertUpdateTask" />
     <FunctionImportMapping FunctionImportName="InsertUpdateTaskAllocation" FunctionName="Karan_SatvaModel.Store.InsertUpdateTaskAllocation" />
@@ -249,16 +261,8 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="ProjectStatus" FunctionName="Karan_SatvaModel.Store.ProjectStatus">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="Karan_SatvaModel.ProjectStatus_Result">
-          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
-          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
-          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
-          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-          <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
-          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        <ComplexTypeMapping TypeName="Karan_SatvaModel.ProjectStatus_Result1">
+          <ScalarProperty Name="Result" ColumnName="Result" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

@@ -316,7 +316,7 @@
     <FunctionImport Name="CheckProjectStatsus" IsComposable="true" ReturnType="Collection(Karan_SatvaModel.CheckProjectStatsus_Result)">
       <Parameter Name="ProjectId" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="DeleteProject">
+    <FunctionImport Name="DeleteProject" ReturnType="Collection(Karan_SatvaModel.DeleteProject_Result)">
       <Parameter Name="ProjectId" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="EmaployeeByProjectID" ReturnType="Collection(Karan_SatvaModel.EmaployeeByProjectID_Result)">
@@ -329,7 +329,7 @@
     <FunctionImport Name="GetAllEmployee" ReturnType="Collection(Karan_SatvaModel.GetAllEmployee_Result)">
       <Parameter Name="EmployeeStatus" Mode="In" Type="Boolean" />
     </FunctionImport>
-    <FunctionImport Name="GetAllProject" ReturnType="Collection(Karan_SatvaModel.GetAllProject_Result)">
+    <FunctionImport Name="GetAllProject" ReturnType="Collection(Karan_SatvaModel.GetAllProject_Result1)">
       <Parameter Name="ProjectStatus" Mode="In" Type="Boolean" />
     </FunctionImport>
     <FunctionImport Name="GetProjectById" ReturnType="Collection(Karan_SatvaModel.GetProjectById_Result)">
@@ -351,7 +351,7 @@
       <Parameter Name="IsDelete" Mode="In" Type="Boolean" />
       <Parameter Name="DepartmentId" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="InsertUpdateProject" ReturnType="Collection(Int32)">
+    <FunctionImport Name="InsertUpdateProject" ReturnType="Collection(Karan_SatvaModel.InsertUpdateProject_Result)">
       <Parameter Name="ProjectId" Mode="In" Type="Int32" />
       <Parameter Name="ProjectName" Mode="In" Type="String" />
       <Parameter Name="ProjectDescription" Mode="In" Type="String" />
@@ -380,7 +380,7 @@
     <FunctionImport Name="ProjectsByEmployeeID" ReturnType="Collection(Karan_SatvaModel.ProjectsByEmployeeID_Result)">
       <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="ProjectStatus" ReturnType="Collection(Karan_SatvaModel.ProjectStatus_Result)">
+    <FunctionImport Name="ProjectStatus" ReturnType="Collection(Karan_SatvaModel.ProjectStatus_Result1)">
       <Parameter Name="ProjectId" Mode="In" Type="Int32" />
       <Parameter Name="ProjectStatus" Mode="In" Type="String" />
     </FunctionImport>
@@ -462,5 +462,22 @@
     <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="50" />
     <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="TaskName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="InsertUpdateProject_Result">
+    <Property Type="Int32" Name="ID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetAllProject_Result1">
+    <Property Type="Int32" Name="ProjectId" Nullable="false" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProjectDescription" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="StartDate" Nullable="false" />
+    <Property Type="String" Name="ProjectStatus" Nullable="true" MaxLength="15" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="DeleteProject_Result">
+    <Property Type="Int32" Name="result" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ProjectStatus_Result1">
+    <Property Type="Int32" Name="Result" Nullable="true" />
   </ComplexType>
 </Schema>

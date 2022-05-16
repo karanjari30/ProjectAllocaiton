@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\ProjectAllocationAPI\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\ProjectAllocationAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -50,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IProjectRepository.cs" />
     <Compile Include="Model\Activity.cs">
       <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>
@@ -69,6 +73,9 @@
       <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\C__MigrationHistory.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DeleteProject_Result.cs">
       <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Department.cs">
@@ -104,7 +111,13 @@
     <Compile Include="Model\GetAllProject_Result.cs">
       <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\GetAllProject_Result1.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\GetProjectById_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\InsertUpdateProject_Result.cs">
       <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Project.cs">
@@ -119,6 +132,10 @@
     <Compile Include="Model\ProjectStatus_Result.cs">
       <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ProjectStatus_Result1.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProjectViewModel.cs" />
     <Compile Include="Model\Task.cs">
       <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>
@@ -129,6 +146,7 @@
       <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ProjectRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Model\EmployeeProjectAllocation.edmx">
