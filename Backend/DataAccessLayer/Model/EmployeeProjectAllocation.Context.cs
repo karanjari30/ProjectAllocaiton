@@ -14,6 +14,7 @@ namespace DataAccessLayer.Model
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Core.Objects;
     using System.Linq;
+    using Entity.Models;
     
     public partial class Karan_SatvaEntities : DbContext
     {

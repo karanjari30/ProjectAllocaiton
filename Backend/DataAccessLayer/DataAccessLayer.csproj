@@ -55,48 +55,10 @@
   <ItemGroup>
     <Compile Include="Interface\IEmployeeRepository.cs" />
     <Compile Include="Interface\IProjectRepository.cs" />
-    <Compile Include="Model\Activity.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\AspNetRole.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\AspNetUser.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\AspNetUserClaim.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\AspNetUserLogin.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\CheckProjectStatsus_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\C__MigrationHistory.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\DeleteProject_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Department.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\EmaployeeByProjectID_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Employee.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\EmployeeProjectAllocation.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EmployeeProjectAllocation.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\EmployeeProjectAllocation.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\EmployeeProjectAllocation.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -104,52 +66,7 @@
       <DependentUpon>EmployeeProjectAllocation.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\EmployeeViewModel.cs" />
-    <Compile Include="Model\GetActivityHistory_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\GetAllEmployee_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\GetAllProject_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\GetAllProject_Result1.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\GetProjectById_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\InsertUpdateEmployee_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\InsertUpdateProject_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Project.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ProjectAllocation.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ProjectsByEmployeeID_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ProjectStatus_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ProjectStatus_Result1.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\ProjectViewModel.cs" />
-    <Compile Include="Model\Task.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\TaskAllocation.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\TaskByProjectAndFilterByEmployee_Result.cs">
-      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\EmployeeRepository.cs" />
     <Compile Include="Services\ProjectRepository.cs" />
@@ -173,14 +90,19 @@
       <LastGenOutput>EmployeeProjectAllocation.Context.cs</LastGenOutput>
       <DependentUpon>EmployeeProjectAllocation.edmx</DependentUpon>
     </Content>
-    <Content Include="Model\EmployeeProjectAllocation.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EmployeeProjectAllocation.edmx</DependentUpon>
-      <LastGenOutput>EmployeeProjectAllocation.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{9D14D476-9C15-4DE1-8EBC-E9E2A48003A5}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{3aa8843c-0d1f-42c4-953d-1ceeea304b19}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

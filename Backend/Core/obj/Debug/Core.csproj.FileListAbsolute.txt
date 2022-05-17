@@ -1,0 +1,9 @@
+D:\ProjectAllocaiton\Backend\Core\bin\Debug\Core.dll
+D:\ProjectAllocaiton\Backend\Core\bin\Debug\Core.pdb
+D:\ProjectAllocaiton\Backend\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+D:\ProjectAllocaiton\Backend\Core\obj\Debug\Core.dll
+D:\ProjectAllocaiton\Backend\Core\obj\Debug\Core.pdb
+D:\ProjectAllocaiton\Backend\Core\bin\Debug\Entity.dll
+D:\ProjectAllocaiton\Backend\Core\bin\Debug\Entity.pdb
+D:\ProjectAllocaiton\Backend\Core\obj\Debug\Core.csproj.AssemblyReference.cache
+D:\ProjectAllocaiton\Backend\Core\obj\Debug\Core.csproj.CopyComplete

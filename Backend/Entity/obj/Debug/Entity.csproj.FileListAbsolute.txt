@@ -1,0 +1,5 @@
+D:\ProjectAllocaiton\Backend\Entity\bin\Debug\Entity.dll
+D:\ProjectAllocaiton\Backend\Entity\bin\Debug\Entity.pdb
+D:\ProjectAllocaiton\Backend\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\ProjectAllocaiton\Backend\Entity\obj\Debug\Entity.dll
+D:\ProjectAllocaiton\Backend\Entity\obj\Debug\Entity.pdb

@@ -1,17 +1,15 @@
-﻿using DataAccessLayer.Interface;
+﻿using Core.CommanFunctions;
+using DataAccessLayer.Interface;
 using DataAccessLayer.Model;
 using DataAccessLayer.Services;
-using ProjectAllocationAPI.Helper;
 using ProjectAllocationAPI.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+using System.Web.Http; 
 
 namespace ProjectAllocationAPI.Controllers
 {
+    [Authorize]
     public class EmployeeController : ApiController
     {
         public Karan_SatvaEntities objEmployee = new Karan_SatvaEntities();
@@ -88,7 +86,7 @@ namespace ProjectAllocationAPI.Controllers
             return objResponse;
         }
 
-        [Route("~/UpdateEmployeeStatus")]
+        [Route("api/UpdateEmployeeStatus")]
         public JsonResponse PatchEmployeeStatus(int id, bool EmployeeStatus)
         {
             var objResponse = new JsonResponse();
@@ -106,7 +104,7 @@ namespace ProjectAllocationAPI.Controllers
             return objResponse;
         }
 
-        [Route("~/GetEmployeeByProjectId")]
+        [Route("api/GetEmployeeByProjectId")]
         public JsonResponse GetEmployeeByProjectId(int ProjectId)
         {
             var objectResponse = new JsonResponse();

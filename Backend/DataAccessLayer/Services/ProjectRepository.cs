@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DataAccessLayer.Interface;
 using DataAccessLayer.Model;
+using Entity.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectAllocationAPI", "Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "..\DataAccessLayer\DataAccessLayer.csproj", "{02A63F0F-5E2D-4634-87CE-FE3821AE0755}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "..\Entity\Entity.csproj", "{3AA8843C-0D1F-42C4-953D-1CEEEA304B19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Core\Core.csproj", "{9D14D476-9C15-4DE1-8EBC-E9E2A48003A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{02A63F0F-5E2D-4634-87CE-FE3821AE0755}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02A63F0F-5E2D-4634-87CE-FE3821AE0755}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02A63F0F-5E2D-4634-87CE-FE3821AE0755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AA8843C-0D1F-42C4-953D-1CEEEA304B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA8843C-0D1F-42C4-953D-1CEEEA304B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA8843C-0D1F-42C4-953D-1CEEEA304B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA8843C-0D1F-42C4-953D-1CEEEA304B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D14D476-9C15-4DE1-8EBC-E9E2A48003A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D14D476-9C15-4DE1-8EBC-E9E2A48003A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D14D476-9C15-4DE1-8EBC-E9E2A48003A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D14D476-9C15-4DE1-8EBC-E9E2A48003A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

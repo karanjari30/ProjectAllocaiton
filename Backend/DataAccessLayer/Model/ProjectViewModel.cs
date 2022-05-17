@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Core.Constants.Enums;
 
 namespace DataAccessLayer.Model
 {
@@ -12,7 +13,7 @@ namespace DataAccessLayer.Model
         public string ProjectName { get; set; }
         public string ProjectDescription { get; set; }
         public System.DateTime StartDate { get; set; }
-        public string ProjectStatus { get; set; }
+        public ProjectStatus ProjectStatus { get; set; }
         public bool IsDelete { get; set; }
         public bool IsActive { get; set; }
     }

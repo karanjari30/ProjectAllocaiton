@@ -362,3 +362,7 @@ D:\ProjectAllocaiton\Backend\ProjectAllocationAPI\bin\AutoMapper.dll
 D:\ProjectAllocaiton\Backend\ProjectAllocationAPI\bin\AutoMapper.xml
 D:\ProjectAllocationApi\Backend\ProjectAllocationAPI\bin\AutoMapper.dll
 D:\ProjectAllocationApi\Backend\ProjectAllocationAPI\bin\AutoMapper.xml
+D:\ProjectAllocaiton\Backend\ProjectAllocationAPI\bin\Entity.dll
+D:\ProjectAllocaiton\Backend\ProjectAllocationAPI\bin\Core.dll
+D:\ProjectAllocaiton\Backend\ProjectAllocationAPI\bin\Entity.pdb
+D:\ProjectAllocaiton\Backend\ProjectAllocationAPI\bin\Core.pdb

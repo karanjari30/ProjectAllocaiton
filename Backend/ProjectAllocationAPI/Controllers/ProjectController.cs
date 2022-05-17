@@ -1,21 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Description;
+using Core.CommanFunctions;
 using DataAccessLayer.Interface;
 using DataAccessLayer.Model;
 using DataAccessLayer.Services;
-using ProjectAllocationAPI.Helper;
 using ProjectAllocationAPI.Models;
 
 namespace ProjectAllocationAPI.Controllers
 {
+    [Authorize]
     public class ProjectController : ApiController
     {
         public Karan_SatvaEntities objProject = new Karan_SatvaEntities();
@@ -38,7 +33,7 @@ namespace ProjectAllocationAPI.Controllers
             }
             return objectResponse;
         }
-        [Route("~/ProjectByID")]
+        [Route("api/ProjectByID")]
         public JsonResponse GetProjectById(int ProjectId)
         {
             var objectResponse = new JsonResponse();
@@ -110,7 +105,7 @@ namespace ProjectAllocationAPI.Controllers
             return objResponse;
         }
 
-        [Route("~/DeleteProjectByID")]
+        [Route("api/DeleteProjectByID")]
         public JsonResponse PatchProjectRemove(int id)
         {
             var objResponse = new JsonResponse();
@@ -120,7 +115,7 @@ namespace ProjectAllocationAPI.Controllers
                 if (objProjectData == 1)
                     objResponse = JsonResponseHelper.JsonMessage(1, "Project deleted successfully.", objProjectData);
                 else if (objProjectData == 2)
-                    objResponse = JsonResponseHelper.JsonMessage(1, "Project can not completed yet", objProjectData);
+                    objResponse = JsonResponseHelper.JsonMessage(2, "Project can not completed yet", objProjectData);
                 else
                     objResponse = JsonResponseHelper.JsonMessage(2, "Record Not Found.", null);
             }
@@ -131,7 +126,7 @@ namespace ProjectAllocationAPI.Controllers
             return objResponse;
         }
 
-        [Route("~/UpdateProjectStatus")]
+        [Route("api/UpdateProjectStatus")]
         public JsonResponse PatchProjectStatus(int id, string ProjectStatus)
         {
             var objResponse = new JsonResponse();
@@ -141,7 +136,7 @@ namespace ProjectAllocationAPI.Controllers
                 if (objProjectStatus == 1)
                     objResponse = JsonResponseHelper.JsonMessage(1, "Status updated successfully.", objProjectStatus);
                 else if (objProjectStatus == 2)
-                    objResponse = JsonResponseHelper.JsonMessage(1, "In project all allocated task is not complete", objProjectStatus);
+                    objResponse = JsonResponseHelper.JsonMessage(2, "In project all allocated task is not complete", objProjectStatus);
                 else
                     objResponse = JsonResponseHelper.JsonMessage(2, "Record Not Found.", null);
             }
@@ -152,7 +147,7 @@ namespace ProjectAllocationAPI.Controllers
             return objResponse;
         }
 
-        [Route("~/GetProjectsByEmployeeID")]
+        [Route("api/GetProjectsByEmployeeID")]
         public JsonResponse GetProjectsByEmployeeID(int EmployeeId)
         {
             var objectResponse = new JsonResponse();

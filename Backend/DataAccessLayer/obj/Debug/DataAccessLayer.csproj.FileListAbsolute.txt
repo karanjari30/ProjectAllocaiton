@@ -26,3 +26,7 @@ D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\AutoMapper.dll
 D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\AutoMapper.xml
 D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\AutoMapper.dll
 D:\ProjectAllocationApi\Backend\DataAccessLayer\bin\Debug\AutoMapper.xml
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\Core.dll
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\Entity.dll
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\Core.pdb
+D:\ProjectAllocaiton\Backend\DataAccessLayer\bin\Debug\Entity.pdb

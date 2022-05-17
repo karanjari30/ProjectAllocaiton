@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AA8843C-0D1F-42C4-953D-1CEEEA304B19}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entity</RootNamespace>
+    <AssemblyName>Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Models\Activity.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CheckProjectStatsus_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DeleteProject_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmaployeeByProjectID_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeProjectAllocation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetActivityHistory_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllEmployee_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllProject_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllProject_Result1.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetProjectById_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InsertUpdateEmployee_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InsertUpdateProject_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\JsonResponse.cs" />
+    <Compile Include="Models\Project.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjectAllocation.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjectsByEmployeeID_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjectStatus_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjectStatus_Result1.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Task.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TaskAllocation.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TaskByProjectAndFilterByEmployee_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\EmployeeProjectAllocation.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EmployeeProjectAllocation.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
