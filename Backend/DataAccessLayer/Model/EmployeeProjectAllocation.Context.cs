@@ -306,5 +306,18 @@ namespace DataAccessLayer.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateEmployeeStatus", employeeIdParameter, isActiveParameter);
         }
+    
+        public virtual ObjectResult<GetActivity_Result> GetActivity(Nullable<int> startNumber, Nullable<int> endNumber)
+        {
+            var startNumberParameter = startNumber.HasValue ?
+                new ObjectParameter("StartNumber", startNumber) :
+                new ObjectParameter("StartNumber", typeof(int));
+    
+            var endNumberParameter = endNumber.HasValue ?
+                new ObjectParameter("EndNumber", endNumber) :
+                new ObjectParameter("EndNumber", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetActivity_Result>("GetActivity", startNumberParameter, endNumberParameter);
+        }
     }
 }

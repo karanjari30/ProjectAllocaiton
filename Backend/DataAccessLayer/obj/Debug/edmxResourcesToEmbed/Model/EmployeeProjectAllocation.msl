@@ -284,5 +284,21 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="UpdateEmployeeStatus" FunctionName="Karan_SatvaModel.Store.UpdateEmployeeStatus" />
+    <FunctionImportMapping FunctionImportName="GetActivity" FunctionName="Karan_SatvaModel.Store.GetActivity">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Karan_SatvaModel.GetActivity_Result">
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="ActivityDescription" ColumnName="ActivityDescription" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+          <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
+          <ScalarProperty Name="TaskStatus" ColumnName="TaskStatus" />
+          <ScalarProperty Name="ActivityDate" ColumnName="ActivityDate" />
+          <ScalarProperty Name="ActivityStatus" ColumnName="ActivityStatus" />
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

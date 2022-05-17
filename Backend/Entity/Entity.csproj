@@ -83,6 +83,9 @@
     <Compile Include="Models\GetActivityHistory_Result.cs">
       <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GetActivity_Result.cs">
+      <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\GetAllEmployee_Result.cs">
       <DependentUpon>EmployeeProjectAllocation.tt</DependentUpon>
     </Compile>

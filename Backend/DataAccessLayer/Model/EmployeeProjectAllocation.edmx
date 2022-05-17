@@ -300,6 +300,10 @@
         <Function Name="EmaployeeByProjectID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ProjectId" Type="int" Mode="In" />
         </Function>
+        <Function Name="GetActivity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StartNumber" Type="int" Mode="In" />
+          <Parameter Name="EndNumber" Type="int" Mode="In" />
+        </Function>
         <Function Name="GetActivityHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="EmployeeId" Type="int" Mode="In" />
           <Parameter Name="ProjectId" Type="int" Mode="In" />
@@ -821,6 +825,10 @@
             <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
             <Parameter Name="IsActive" Mode="In" Type="Boolean" />
           </FunctionImport>
+          <FunctionImport Name="GetActivity" ReturnType="Collection(Karan_SatvaModel.GetActivity_Result)">
+            <Parameter Name="StartNumber" Mode="In" Type="Int32" />
+            <Parameter Name="EndNumber" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="EmaployeeByProjectID_Result">
           <Property Type="Int32" Name="ProjectId" Nullable="false" />
@@ -911,6 +919,18 @@
         </ComplexType>
         <ComplexType Name="InsertUpdateEmployee_Result">
           <Property Type="Int32" Name="EmpID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetActivity_Result">
+          <Property Type="Int32" Name="ActivityId" Nullable="false" />
+          <Property Type="String" Name="ActivityDescription" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="ProjectId" Nullable="true" />
+          <Property Type="Int32" Name="EmployeeId" Nullable="true" />
+          <Property Type="Int32" Name="TaskId" Nullable="true" />
+          <Property Type="String" Name="ProjectStatus" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="TaskStatus" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="ActivityDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="ActivityStatus" Nullable="false" MaxLength="6" />
+          <Property Type="Int64" Name="RowNumber" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1201,6 +1221,22 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="UpdateEmployeeStatus" FunctionName="Karan_SatvaModel.Store.UpdateEmployeeStatus" />
+          <FunctionImportMapping FunctionImportName="GetActivity" FunctionName="Karan_SatvaModel.Store.GetActivity">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Karan_SatvaModel.GetActivity_Result">
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="ActivityDescription" ColumnName="ActivityDescription" />
+                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+                <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
+                <ScalarProperty Name="TaskStatus" ColumnName="TaskStatus" />
+                <ScalarProperty Name="ActivityDate" ColumnName="ActivityDate" />
+                <ScalarProperty Name="ActivityStatus" ColumnName="ActivityStatus" />
+                <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

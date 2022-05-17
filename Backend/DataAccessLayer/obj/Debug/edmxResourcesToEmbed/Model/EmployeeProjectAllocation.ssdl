@@ -295,6 +295,10 @@
   <Function Name="EmaployeeByProjectID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ProjectId" Type="int" Mode="In" />
   </Function>
+  <Function Name="GetActivity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartNumber" Type="int" Mode="In" />
+    <Parameter Name="EndNumber" Type="int" Mode="In" />
+  </Function>
   <Function Name="GetActivityHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="EmployeeId" Type="int" Mode="In" />
     <Parameter Name="ProjectId" Type="int" Mode="In" />

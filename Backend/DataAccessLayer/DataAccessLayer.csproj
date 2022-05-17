@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IActivityRepository.cs" />
     <Compile Include="Interface\IEmployeeRepository.cs" />
     <Compile Include="Interface\IProjectRepository.cs" />
     <Compile Include="Model\EmployeeProjectAllocation.Context.cs">
@@ -68,6 +69,7 @@
     <Compile Include="Model\EmployeeViewModel.cs" />
     <Compile Include="Model\ProjectViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ActivityRepository.cs" />
     <Compile Include="Services\EmployeeRepository.cs" />
     <Compile Include="Services\ProjectRepository.cs" />
   </ItemGroup>

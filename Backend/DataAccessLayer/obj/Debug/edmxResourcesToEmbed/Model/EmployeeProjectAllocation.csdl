@@ -392,6 +392,10 @@
       <Parameter Name="EmployeeId" Mode="In" Type="Int32" />
       <Parameter Name="IsActive" Mode="In" Type="Boolean" />
     </FunctionImport>
+    <FunctionImport Name="GetActivity" ReturnType="Collection(Karan_SatvaModel.GetActivity_Result)">
+      <Parameter Name="StartNumber" Mode="In" Type="Int32" />
+      <Parameter Name="EndNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="EmaployeeByProjectID_Result">
     <Property Type="Int32" Name="ProjectId" Nullable="false" />
@@ -482,5 +486,17 @@
   </ComplexType>
   <ComplexType Name="InsertUpdateEmployee_Result">
     <Property Type="Int32" Name="EmpID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetActivity_Result">
+    <Property Type="Int32" Name="ActivityId" Nullable="false" />
+    <Property Type="String" Name="ActivityDescription" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="ProjectId" Nullable="true" />
+    <Property Type="Int32" Name="EmployeeId" Nullable="true" />
+    <Property Type="Int32" Name="TaskId" Nullable="true" />
+    <Property Type="String" Name="ProjectStatus" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="TaskStatus" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="ActivityDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ActivityStatus" Nullable="false" MaxLength="6" />
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
   </ComplexType>
 </Schema>
